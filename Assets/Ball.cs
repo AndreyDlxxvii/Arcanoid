@@ -4,25 +4,13 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private bool flag = false;
-    private Vector2 vector2 = Vector2.left;
-    private void OnCollisionEnter2D(Collision2D collision)
+    public float power;
+    private void Start()
     {
-        var temp = GetComponent<Rigidbody2D>().position;
-        print(temp);
-
-        flag = true;
-        
+        var vect = new Vector2(1.1f, 1.2f);
+        var force = GetComponent<Rigidbody2D>();
+        force.AddForce(vect * Time.deltaTime * power);
     }
 
 
-    void Update()
-    {
-        transform.Translate(vector2 * Time.deltaTime);
-        if (flag == true)
-        {
-            vector2 = Vector2.down;
-            vector2.reflect
-        }
-    }
 }
