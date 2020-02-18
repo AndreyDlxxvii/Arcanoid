@@ -5,10 +5,11 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     private bool flag = false;
-    private Vector2 vector2 = Vector2.up;
+    private Vector2 vector2 = Vector2.left;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        var temp = GetComponent<Rigidbody2D>().position;
+        print(temp);
 
         flag = true;
         
@@ -21,6 +22,7 @@ public class Ball : MonoBehaviour
         if (flag == true)
         {
             vector2 = Vector2.down;
+            vector2.reflect
         }
     }
 }
