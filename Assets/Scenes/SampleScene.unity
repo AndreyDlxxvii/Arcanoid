@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 103764443}
   - component: {fileID: 103764442}
   - component: {fileID: 103764441}
+  - component: {fileID: 103764445}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -315,8 +316,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
+  m_CollisionDetection: 1
+  m_Constraints: 6
 --- !u!212 &103764443
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -381,6 +382,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &103764445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103764440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f94cee34bc03e4847b6f2916f8860b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  _rb: {fileID: 0}
 --- !u!1 &318014048
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31039b44dc61740419985a82f23639ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  power: 2
+  power: 1
 --- !u!1 &427996172
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +671,6 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
-  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -672,20 +686,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
---- !u!114 &519420030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f94cee34bc03e4847b6f2916f8860b66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  player: {fileID: 103764440}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

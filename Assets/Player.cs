@@ -5,23 +5,28 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
-    public GameObject player;
 
+    public Rigidbody2D _rb;
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print(collision.collider.name);
+    }
+
+    private void Start()
+    {
+       _rb = GetComponent<Rigidbody2D>();
+    }
     private void FixedUpdate()
     {
         Move();
     }
 
-
-
-        void Update()
+    private void Move()
     {
-        float i = Input.GetAxis("Horizontal");
-        print (i);
-        float xPos = speed * i * Time.deltaTime;
-
-        player.transform.position = new Vector2(xPos, -4);
-
-
+        float movePlayer = Input.GetAxis("Horizontal");
+        Vector2 movement = new Vector2(movePlayer, 0f);
+        transform.Translate(movement * speed * Time.fixedDeltaTime);
+        //_rb.AddForce(movement * speed);
     }
 }
