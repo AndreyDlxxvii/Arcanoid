@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.collider.name);
+       _rb.velocity = new Vector2(0f, 0f);
     }
 
     private void Start()
