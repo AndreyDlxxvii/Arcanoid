@@ -7,19 +7,25 @@ public class Player : MonoBehaviour
     public float speed;
     public GameObject player;
 
+    private Rigidbody2D _rb;
+    private float move;
 
-
-
-
-        void Update()
+    private void Start()
     {
-        float i = Input.GetAxis("Horizontal");
-        print(i);
-  
-        float xPos = speed * i * Time.deltaTime;
+        _rb = GetComponent<Rigidbody2D>();
+    }
+    void FixedUpdate()
+    {
+        Move();
+    }
 
-        player.transform.position = new Vector2(xPos, -4.53f);
-
-
+    void Update()
+    {
+        move = Input.GetAxis("Horizontal");
+    }
+    private void Move()
+    {
+        Vector2 movement = transform.right * move * speed * Time.deltaTime;
+        _rb.MovePosition(_rb.position + movement);
     }
 }
