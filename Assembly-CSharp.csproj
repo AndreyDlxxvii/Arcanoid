@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Ball.cs" />
-    <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\Briks.cs" />
+    <Compile Include="Assets\Scripts\Delete.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Git/Arcanoid/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
