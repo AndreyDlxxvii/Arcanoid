@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\Briks.cs" />
-    <Compile Include="Assets\Scripts\Delete.cs" />
+    <Compile Include="Assets\Scripts\BriksManager.cs" />
     <Compile Include="Assets\Scripts\GameOver.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Restart.cs" />

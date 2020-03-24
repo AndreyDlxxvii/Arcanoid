@@ -9,8 +9,6 @@ public class Ball : MonoBehaviour
     {
         var vect = new Vector2(1.1f, 1.2f);
         var force = GetComponent<Rigidbody2D>();
-        force.AddForce(vect * Time.deltaTime * power);
+        force.AddForce(vect * power);
     }
-
-
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delete : MonoBehaviour
+public class BriksManager : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {

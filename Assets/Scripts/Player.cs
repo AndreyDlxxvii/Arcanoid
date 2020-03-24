@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed;
+    public float Speed;
     public GameObject player;
 
     private Rigidbody2D _rb;
-    private float move;
+    private float _move;
 
     private void Start()
     {
@@ -18,14 +18,13 @@ public class Player : MonoBehaviour
     {
         Move();
     }
-
     void Update()
     {
-        move = Input.GetAxis("Horizontal");
+        _move = Input.GetAxis("Horizontal");
     }
     private void Move()
     {
-        Vector2 movement = transform.right * move * speed * Time.deltaTime;
+        Vector2 movement = transform.right * _move * Speed * Time.fixedDeltaTime;
         _rb.MovePosition(_rb.position + movement);
     }
 }
